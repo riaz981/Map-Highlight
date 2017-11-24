@@ -1,0 +1,1 @@
+Map Highlight written in pure javascript. Where first the coordinates of each states are taken through http://imagemap-generator.dariodomi.de/ and then when you hover over each state of australian map the state color changes. Just a template can be further modified depending on different country maps.

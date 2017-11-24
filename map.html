@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<body>
+	<div>
+		<img src="australia_map_country.jpg" id="myMap" usemap="#map"/>
+		<map name="map" id="map">
+		    <area alt="vic" id="vic" title="vic" href="#" shape="poly" coords="306,286,306,330,329,337,344,329,359,339,397,323" />
+		    <area alt="nsw" title="nsw" id="nsw" href="#" shape="poly" coords="306,228,307,284,397,319,428,253,434,221" />
+		    <area alt="qld" title="qld" id="qld" href="#" shape="poly" coords="274,88,275,189,303,191,306,224,431,215,431,189,399,153,384,126,346,64,319,19" />
+		    <area alt="nt" title="nt" id="nt" href="#" shape="poly" coords="220,25,201,39,183,69,181,190,276,190,248,66,252,54,258,38" />
+		    <area alt="wa" title="wa" id="wa" href="#" shape="poly" coords="179,69,161,57,125,94,118,84,109,96,113,103,79,126,19,172,24,201,34,226,41,254,44,273,38,283,43,292,63,296,74,290,83,282,112,281,129,274,144,265,180,257" />
+		    <area alt="sa" title="sa" id="sa" href="#" shape="poly" coords="249,293,237,269,226,260,206,257,184,256,180,193,302,195,274,271,285,297,294,305,301,323,303,328,306,329,298,278,301,258,305,227,301,215" />
+		</map>
+		<div id="saySomething"></div>
+		<script>
+			//Mouseover function for each state
+			var qld = document.getElementById("qld");
+			qld.onmouseover = function(){
+				mapChanger("qld");
+			}
+			var nsw = document.getElementById("nsw");
+			nsw.onmouseover = function(){
+				mapChanger("nsw");
+
+			}
+			var vic = document.getElementById("vic");
+			vic.onmouseover = function(){
+				mapChanger("vic");
+
+			}
+
+			var nt = document.getElementById("nt");
+			nt.onmouseover = function(){
+				mapChanger("nt");
+			}
+
+			var wa = document.getElementById("wa");
+			wa.onmouseover = function(){
+				mapChanger("wa");
+			}
+
+			var sa = document.getElementById("sa");
+			sa.onmouseover = function(){
+				mapChanger("sa");
+
+			}
+
+			//Main function for changing image on mouseover
+			function mapChanger(state_name){
+				var image = document.getElementById("myMap");
+				if(state_name === "qld"){
+					document.getElementById("saySomething").innerHTML = "Hello I am in Queensland";
+					image.src = "250px-Queensland_in_Australia.svg.png";
+					console.log(image.src);
+
+				}
+
+				else if(state_name === "nsw"){
+					document.getElementById("saySomething").innerHTML = "Hello I am in New South Wales";
+					image.src = "800px-New_South_Wales_in_Australia.svg.png";
+					console.log(image.src);
+				}
+
+				else if(state_name === "vic"){
+					document.getElementById("saySomething").innerHTML = "Hello I am in Victoria";
+					image.src = "800px-Victoria_in_Australia.svg.png";
+					console.log(image.src);
+				}
+
+				else if(state_name === "nt"){
+					document.getElementById("saySomething").innerHTML = "Hello I am in Norther Territory";
+					image.src = "800px-Northern_Territory_in_Australia.svg.png";
+					console.log(image.src);
+				}
+
+				else if(state_name === "wa"){
+					document.getElementById("saySomething").innerHTML = "Hello I am in Western Australia";
+					image.src = "800px-Western_Australia_in_Australia.svg.png";
+					console.log(image.src);
+				}
+				
+				else if(state_name === "sa"){
+					document.getElementById("saySomething").innerHTML = "Hello I am in South Australia";
+					image.src = "800px-South_Australia_in_Australia.svg.png";
+					console.log(image.src);
+				}
+			}
+		</script>
+	</div>
+</body>
+</html>
